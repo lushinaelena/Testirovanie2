@@ -20,6 +20,15 @@ public class TestCashback {
 
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void shouldCheckUnsubscribedBoundaryTest () {
+        Cashback cashback = new Cashback();
+        int actual =cashback.cashBackCalculation(20000, false);
+        int expected = 1000;
+
+        Assertions.assertEquals(expected, actual);
+    }
     //тесты, подписанные выше лимита, неподписанные выше лимита
     //тесты, подписанные граничные условия - бонус =499, 500, 501
     //тесты, неподписанные граничные условия - бонус = 499, 500, 501
